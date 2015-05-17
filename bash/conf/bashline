@@ -1,5 +1,5 @@
 # set up the terminal format
-__GREY__='\[\e[0;30m\]' ;
+__GREY__='\[\e[0;34m\]' ;
 __BLUE__='\[\e[0;34m\]' ;
 __WHITE__='\[\e[0;37m\]' ;
 __GREEN__='\[\e[;32m\]' ;

@@ -11,14 +11,21 @@ source "$HOME/.dots/bash/conf/colors"
 
 source "$HOME/.dots/bash/conf/bashline"
 
-source "$HOME/.dots/bash/conf/rbenv"
+if which rbenv; then
+  source "$HOME/.dots/bash/conf/rbenv"
+fi
 
 source "$HOME/.dots/bash/conf/git"
 
 source "$HOME/.dots/bash/conf/bash_completion"
 
-source "$HOME/.dots/bash/conf/npm"
-source "$HOME/.dots/bash/conf/nvm"
+if which npm; then
+  source "$HOME/.dots/bash/conf/npm"
+fi
+
+if which nvm; then
+  source "$HOME/.dots/bash/conf/nvm"
+fi
 
 source "$HOME/.dots/bash/conf/java"
 
@@ -33,7 +40,7 @@ export ZZPATH="$HOME/.dots/bash/funcoeszz"  # script
 source "$ZZPATH"				
 
 # set the default editor
-export EDITOR="mvim -v"
+export EDITOR="vim -v"
 
 # set the term to have 256 colors
 export TERM=xterm-256color

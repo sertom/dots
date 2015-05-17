@@ -1,5 +1,5 @@
 # make ls colorful
-alias ls='gls -1 --color';
+alias ls='ls -1 --color';
 alias sl='ls';
 alias ll='ls -alF'
 alias la='ls -A'
@@ -19,13 +19,14 @@ alias here="localhost"
 # set move and copy to be verbose
 alias mv="mv -v"
 alias cp="gcp -v"
+
+# VIM
 alias vi="vim"
-#case `uname -s` in
-# 'Linux') if type -p gvim &>/dev/null; then alias vim="gvim"; fi ;;
-# 'Darwin') if type -p mvim &>/dev/null; then alias vim="mvim"; fi ;;
-#esac
 alias v="vim"
-alias vim="mvim -v"
+if which mvim; then
+  alias vim="mvim -v"
+fi
+
 alias g="git"
 alias br='cd /Users/fesperan/gid-git-svn/brazil-build'
 alias ww='cd ~/workspaces/$(ls -1 --color=never ~/workspaces | selecta)'
