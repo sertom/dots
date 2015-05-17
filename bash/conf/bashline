@@ -1,5 +1,5 @@
 # set up the terminal format
-__GREY__='\[\e[0;34m\]' ;
+__GREY__='\[\e[0;36m\]' ;
 __BLUE__='\[\e[0;34m\]' ;
 __WHITE__='\[\e[0;37m\]' ;
 __GREEN__='\[\e[;32m\]' ;
@@ -17,14 +17,14 @@ git_not_pushed(){
 
 _TIME="$__GREY__\t";
 #_USER="$__BLUE__ \u@";
-#_HOST="$__WHITE__\h:";
+_HOST="$__GREY__@\h:";
 _PATH="$__GREEN__\w";
 _GIT="$__RED__$GIT_REPO $__GREY__\$(git_not_pushed)";
 _NEW_LINE="\n";
 _PROMPT="$__RED__$SYMBOL $END_";
 
 
-export PS1="$_TIME$_USER$_HOST $_PATH $_GIT $_NEW_LINE$_PROMPT"
+export PS1="${_TIME}${_USER}${_HOST} ${_PATH} ${_GIT} ${_NEW_LINE}${_PROMPT}"
 
 #\!  # #History number of current command
 #\# # #Command number of current command
